@@ -71,6 +71,7 @@ curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/peopl
     "skin_color": "Fair"
 }'
 ```
+
 Crear una pelicula:
 
 ```
@@ -87,16 +88,28 @@ curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/films
 ```
 
 Obtener las personas:
+
+```
 curl -X GET http://localhost:4000/api/people
+```
 
 Obtener una persona por id:
+
+```
 curl -X GET http://localhost:4000/api/people/{id}
+```
 
 Obtener las peliculas:
+
+```
 curl -X GET http://localhost:4000/api/films
+```
 
 Obtener una pelicula por id:
+
+```
 curl -X GET http://localhost:4000/api/films/{id}
+```
 
 
 ## Endpoint Api Gateway con acceso al proyecto desplegado en AWS

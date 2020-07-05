@@ -8,6 +8,6 @@ jspm_packages
 .webpack/
 
 
-infraestructura/*
+#infraestructura/*
 
 serverless/environment/.env*

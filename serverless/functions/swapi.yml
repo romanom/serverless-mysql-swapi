@@ -1,0 +1,78 @@
+people:
+  handler: src/handlers/people.run
+  name: people-swapi
+  description: get People Resources
+  events:
+    - http:
+        path: api/people/{id}
+        method: get
+        request:
+          parameters:
+            paths:
+              id: true
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+    - http:
+        path: api/people
+        method: get
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+    - http:
+        path: api/people
+        method: post
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+
+
+films:
+  handler: src/handlers/film.run
+  name: film-swapi
+  description: get Film Resources
+  events:
+    - http:
+        path: api/films/{id}
+        method: get
+        request:
+          parameters:
+            paths:
+              id: true
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+    - http:
+        path: api/films
+        method: get
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+    - http:
+        path: api/films
+        method: post
+        cors: 
+          origin: '*'
+          headers:
+              - Content-Type
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+
+    
+
+

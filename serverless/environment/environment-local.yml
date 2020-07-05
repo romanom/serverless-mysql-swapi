@@ -1,0 +1,20 @@
+environment:
+  NODE_ENV: ${opt:stage, 'development'}
+
+  DB_USER: ""
+  DB_PASSWORD: ""
+  DB_DATABASE: ""
+  DB_HOST: ""
+  DB_ENGINE: "mysql"
+
+  LOGGER_ENGINE: "console"
+  LOGGER_LEVEL: ""
+  LOGGER_TOKEN: ""
+  LOGGER_SUBDOMAIN: "swapi"
+
+  SWAPI_URL: "https://swapi.dev/api"
+
+
+  REGION: "us-west-1"
+  PROFILE: "default"
+  STAGE: "demo"

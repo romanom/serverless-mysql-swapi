@@ -1,0 +1,8 @@
+webpack:
+  webpackConfig: webpack.config.js
+  packager: npm
+  includeModules:
+    forceInclude:
+      - mysql2
+serverless-offline:
+    port: 4000

@@ -1,0 +1,46 @@
+{
+    "name": "swapi-serverless",
+    "version": "1.0.0",
+    "description": "backend for the connection with sap",
+    "main": "index.js",
+    "scripts": {
+        "debug": "cross-env SLS_DEBUG=* ENGINE=local node --inspect=4001 'node_modules\\serverless\\bin\\serverless' offline -s development",
+        "start": "./node_modules/.bin/cross-env ENGINE=local ./node_modules/.bin/serverless offline start --dontPrintOutput",
+        "deploy": "cross-env SLS_DEBUG=true NODE_ENV=development ENGINE=development ./node_modules/.bin/sls deploy -v --stage development"
+    },
+    "author": "jdiestr@chasquitechnologies.com",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.6.2",
+        "@babel/plugin-transform-runtime": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "babel-loader": "^8.0.6",
+        "bluebird": "^3.7.2",
+        "copy-webpack-plugin": "^5.0.5",
+        "cross-env": "^6.0.3",
+        "sequelize-cli": "^5.5.1",
+        "serverless": "^1.67.0",
+        "serverless-offline": "^5.12.0",
+        "serverless-webpack": "^5.3.1",
+        "standard": "^14.3.1",
+        "webpack": "^4.41.0",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.6.2",
+        "aws-sdk": "^2.610.0",
+        "axios": "^0.19.2",
+        "helmet": "^3.21.2",
+        "joi": "^14.3.1",
+        "left-pad": "^1.3.0",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
+        "mysql2": "^1.5.1",
+        "request": "^2.88.2",
+        "sequelize": "^5.19.4",
+        "source-map-support": "^0.5.13",
+        "uuid": "^3.4.0",
+        "winston": "^3.2.1",
+        "winston-loggly-bulk": "^3.0.1"
+    }
+}

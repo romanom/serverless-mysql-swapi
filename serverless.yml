@@ -1,0 +1,30 @@
+service: swapi-serverless
+
+# custom variables
+custom: ${file(./serverless/customConfig.yml)}
+  
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'development'}
+  region: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.REGION}
+  profile: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.PROFILE}
+  memorySize: 512
+  timeout: 300
+  versionFunctions: false
+
+  environment: ${file(./serverless/customEnvironment.yml)}
+
+  
+functions:
+  - ${file(./serverless/functions/swapi.yml)}
+
+package:
+  individually: true
+  exclude:
+    - serverless/**
+    - ./**.yml
+
+plugins:
+  - serverless-offline
+  - serverless-webpack

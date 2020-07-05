@@ -1,0 +1,15 @@
+DB_USER: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.DB_USER}
+DB_PASSWORD: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.DB_PASSWORD}
+DB_DATABASE: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.DB_DATABASE}
+DB_HOST: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.DB_HOST}
+DB_ENGINE: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.DB_ENGINE}
+ENV: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.NODE_ENV}
+SWAPI_URL: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.SWAPI_URL}
+LOGGER_ENGINE: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.LOGGER_ENGINE}
+LOGGER_TOKEN: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.LOGGER_TOKEN}
+LOGGER_SUBDOMAIN: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.LOGGER_SUBDOMAIN}
+LOGGER_LEVEL: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.LOGGER_LEVEL}
+REGION: ${file(./serverless/environment/environment-${env:ENGINE, 'remote'}.yml):environment.REGION}
+
+
+

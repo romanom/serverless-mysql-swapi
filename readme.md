@@ -56,6 +56,8 @@ GET /api/films/{id}
 
 
 Crear una persona:
+
+```
 curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/people -d '
 {
     "birth_year": "19 BBY",
@@ -68,8 +70,10 @@ curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/peopl
     "name": "Luke Skywalker 888",
     "skin_color": "Fair"
 }'
-
+```
 Crear una pelicula:
+
+```
 curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/films -d '
 {
     "director": "Antony melendez",
@@ -80,6 +84,7 @@ curl -H "Content-Type: application/json" -X POST http://localhost:4000/api/films
     "title": "Parrillada de casa",
     "people": [105]
 }'
+```
 
 Obtener las personas:
 curl -X GET http://localhost:4000/api/people
